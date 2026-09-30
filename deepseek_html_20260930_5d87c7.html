@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>At the Airport – Check-in Pronunciation</title>
+<meta name="description" content="Practise English check-in dialogues with pronunciation scoring.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3B3A9B; --blue-d:#2A2977; --milk:#F5F2FF; --line:#D9D4F2;
+  --caramel:#C98B4E; --mint:#1FA97C; --mint-l:#D5F4E7;
+  --pink:#E8486F; --pink-l:#FFDFE6; --butter:#FFD25A; --butter-l:#FFF0BE;
+  --ink:#221F4B; --soft:#6B678F; --card:#fff;
+  --display:'Fredoka','Trebuchet MS',system-ui,sans-serif;
+  --body:'Atkinson Hyperlegible','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--milk);color:var(--ink);font:400 1.125rem/1.5 var(--body);min-height:100vh;display:flex;flex-direction:column}
+button,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(16px,4vw,40px)}
+.brand{display:flex;align-items:center;gap:10px;font:600 1.6rem var(--display);color:var(--blue)}
+.brand svg{width:38px;height:38px}
+.link{background:none;border:0;padding:6px 8px;color:var(--blue);text-decoration:underline;text-underline-offset:3px;font-weight:700}
+
+main{flex:1;width:100%;max-width:1040px;margin:0 auto;padding:8px clamp(16px,4vw,40px) 40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:3px solid var(--blue);background:var(--blue);color:#fff;border-radius:999px;padding:12px 26px;font:600 1.25rem var(--display);box-shadow:0 5px 0 var(--blue-d);transition:transform .08s,box-shadow .08s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--blue-d)}
+.btn.ghost{background:#fff;color:var(--blue)}
+.btn svg{width:26px;height:26px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+/* start */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding-top:12px}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:700;color:var(--blue);margin-bottom:14px}
+.hero p.lead{font-size:1.25rem;max-width:34ch;margin:0 0 24px}
+.modes{border:0;padding:0;margin:0 0 24px;display:grid;gap:12px}
+.modes legend{font:600 1.15rem var(--display);margin-bottom:8px;padding:0}
+.mode{display:block;position:relative}
+.mode input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.mode .box{display:block;background:#fff;border:3px solid var(--line);border-radius:20px;padding:14px 18px}
+.mode strong{display:block;font:600 1.2rem var(--display)}
+.mode span.d{color:var(--soft);font-size:1rem}
+.mode small{display:block;color:var(--caramel);font-weight:700;font-size:.95rem}
+.mode input:checked+.box{border-color:var(--blue);background:#fff;box-shadow:0 4px 0 var(--blue)}
+.mode input:focus-visible+.box{outline:3px solid var(--blue);outline-offset:3px}
+.demo{background:#fff;border:3px solid var(--line);border-radius:28px;padding:22px;display:grid;gap:16px}
+.demo .tiles{justify-content:flex-start}
+.demo .tile{font-size:1.35rem;padding:6px 12px;cursor:default}
+.notice{background:var(--butter-l);border:2px solid var(--butter);border-radius:14px;padding:10px 14px;margin:0 0 16px;font-size:1rem}
+
+/* bubbles */
+.bubble{display:inline-block;max-width:100%;border-radius:20px;padding:10px 16px;font-size:1.05rem}
+.bubble b{font-family:var(--display);font-weight:600;margin-right:6px}
+.bubble.waiter{background:#fff;border:2px solid var(--line);border-bottom-left-radius:6px}
+.bubble.customer{background:var(--blue);color:#fff;border-bottom-right-radius:6px;justify-self:end}
+
+/* practice */
+.bar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin-bottom:18px}
+.dots{display:flex;gap:6px;flex-wrap:wrap}
+.dots i{width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--line)}
+.dots i.now{border-color:var(--blue);background:var(--butter);transform:scale(1.25)}
+.dots i.good{background:var(--mint);border-color:var(--mint)}
+.dots i.ok{background:var(--butter);border-color:var(--caramel)}
+.dots i.low{background:var(--pink);border-color:var(--pink)}
+.dots i.skip{background:var(--line)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip,.tools select{background:#fff;border:2px solid var(--line);border-radius:999px;padding:6px 14px;font-size:1rem;display:inline-flex;align-items:center;gap:8px}
+.chip[aria-pressed="true"]{background:var(--butter-l);border-color:var(--caramel)}
+.tools select{max-width:190px}
+.stage{background:#fff;border:3px solid var(--line);border-radius:32px;padding:clamp(18px,4vw,36px);display:grid;gap:18px;justify-items:center;text-align:center}
+.role{font:600 1.1rem var(--display);color:var(--soft)}
+.prompt{width:100%;text-align:left;margin-bottom:14px;display:grid}
+.tiles{display:flex;flex-wrap:wrap;gap:10px 8px;justify-content:center}
+.tile{font:600 clamp(1.5rem,4.5vw,2.4rem) var(--display);background:#fff;color:var(--ink);border:3px solid var(--blue);border-radius:16px;padding:6px 14px;box-shadow:0 4px 0 var(--blue);transition:background .2s,transform .1s}
+.tile:active{transform:translateY(3px);box-shadow:0 1px 0 var(--blue)}
+.tile.say{background:var(--butter);transform:translateY(-4px)}
+.tile.good{background:var(--mint-l);border-color:var(--mint);box-shadow:0 4px 0 var(--mint)}
+.tile.close{background:var(--butter-l);border-color:var(--caramel);box-shadow:0 4px 0 var(--caramel)}
+.tile.bad{background:var(--pink-l);border-color:var(--pink);box-shadow:0 4px 0 var(--pink)}
+.controls{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:center;margin-top:6px}
+.mic{width:112px;height:112px;border-radius:50%;border:4px solid var(--blue-d);background:var(--blue);color:#fff;display:grid;place-items:center;align-content:center;font:600 1.05rem var(--display);box-shadow:0 6px 0 var(--blue-d);position:relative}
+.mic svg{width:40px;height:40px}
+.mic:active{transform:translateY(4px);box-shadow:0 2px 0 var(--blue-d)}
+.mic.rec{background:var(--pink);border-color:#A72447;box-shadow:0 6px 0 #A72447}
+.mic.rec::after{content:'';position:absolute;inset:-12px;border-radius:50%;border:4px solid var(--pink);opacity:.6;animation:ping 1.2s ease-out infinite}
+.mic[disabled]{opacity:.45;cursor:not-allowed}
+@keyframes ping{from{transform:scale(.85);opacity:.7}to{transform:scale(1.2);opacity:0}}
+.hint{margin:0;min-height:1.6em;font-weight:700;color:var(--blue)}
+.heard{margin:0;color:var(--soft)}
+
+.feedback{margin-top:20px;background:#fff;border:3px solid var(--blue);border-radius:32px;padding:clamp(18px,4vw,30px);display:grid;gap:16px;justify-items:center;text-align:center}
+.scorebox{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center}
+.cup{width:150px;height:auto}
+.cupfill{transform:translateY(76px);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.num{font:700 4.2rem/1 var(--display);color:var(--blue)}
+.num small{font-size:1.2rem;color:var(--soft);font-weight:500}
+.stars{display:flex;gap:4px}
+.star{width:34px;height:34px;fill:#E7E3F7}
+.star.on{fill:var(--butter);stroke:var(--caramel);stroke-width:1.2;stroke-linejoin:round}
+.msg{font:600 1.6rem var(--display)}
+.tips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center}
+.tips button{background:var(--pink-l);border:2px solid var(--pink);border-radius:999px;padding:4px 14px;font-weight:700}
+.actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.next.counting::after{content:'';position:absolute;left:0;bottom:0;height:6px;background:var(--butter);animation:fill 3s linear forwards}
+@keyframes fill{from{width:0}to{width:100%}}
+
+/* results */
+.res{display:grid;gap:22px;justify-items:center;text-align:center}
+.res h2{font-size:clamp(2rem,5vw,3rem);color:var(--blue)}
+.list{list-style:none;margin:0;padding:0;width:100%;display:grid;gap:8px;text-align:left}
+.list li{display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:16px;padding:8px 12px}
+.list .sc{display:flex;align-items:center;gap:6px;font-weight:700}
+.list .star{width:20px;height:20px}
+.mini{width:40px;height:40px;border-radius:50%;border:2px solid var(--blue);background:#fff;color:var(--blue);display:grid;place-items:center;padding:0}
+.mini svg{width:20px;height:20px}
+
+footer{padding:18px clamp(16px,4vw,40px) 26px;color:var(--soft);font-size:.95rem;text-align:center}
+footer a{color:var(--blue)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .hero p.lead{max-width:none}
+  .list li{grid-template-columns:auto 1fr auto}
+  .list li .mini{grid-column:3;grid-row:1}
+  .list li .sc{grid-column:2;grid-row:2}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 140 120" aria-hidden="true"><path d="M18 28H98V66C98 88 82 104 58 104C34 104 18 88 18 66Z" fill="#FFD25A" stroke="#3B3A9B" stroke-width="7"/><path d="M98 42H108a14 14 0 0 1 0 28H96" fill="none" stroke="#3B3A9B" stroke-width="7"/></svg>
+    At the Airport
+  </div>
+  <button id="menuBtn" class="link" hidden>Back to menu</button>
+</header>
+
+<main>
+  <!-- START -->
+  <section id="start" class="hero" aria-labelledby="h1">
+    <div>
+      <h1 id="h1">Practise your check-in English</h1>
+      <p class="lead">Listen to each line, say it back, and get points for how clearly you speak.</p>
+
+      <div id="noSR" class="notice" hidden>Your browser can't listen to your voice. Open this page in Chrome, Edge or Safari to get scores. You can still listen to every line.</div>
+
+      <fieldset class="modes">
+        <legend>How do you want to practise?</legend>
+        <label class="mode"><input type="radio" name="mode" value="all" checked>
+          <span class="box"><strong>Say every line</strong><span class="d">Practise both the clerk and the traveller.</span><small id="best-all"></small></span></label>
+        <label class="mode"><input type="radio" name="mode" value="customer">
+          <span class="box"><strong>Be the traveller</strong><span class="d">The clerk speaks first, then you answer.</span><small id="best-customer"></small></span></label>
+      </fieldset>
+      <button id="startBtn" class="btn">Start practising</button>
+    </div>
+
+    <div class="demo" aria-hidden="true">
+      <span class="bubble waiter"><b>Check-in clerk</b>Can I see your ticket, please?</span>
+      <span class="bubble customer"><b>You</b>Sure, here is my e-ticket.</span>
+      <div class="tiles">
+        <span class="tile good">Sure,</span><span class="tile good">here</span><span class="tile close">is</span><span class="tile good">my</span><span class="tile bad">e-ticket.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE -->
+  <section id="practice" hidden aria-label="Practice">
+    <div class="bar">
+      <div id="dots" class="dots" aria-hidden="true"></div>
+      <div class="tools">
+        <button id="slowBtn" class="chip" aria-pressed="false">🐢 Slow voice</button>
+        <label class="chip"><input type="checkbox" id="autoNext" checked> Next line automatically</label>
+        <select id="voiceSel" aria-label="Choose a voice"></select>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div id="prompt" class="prompt" hidden></div>
+      <div id="role" class="role"></div>
+      <div id="tiles" class="tiles"></div>
+      <div class="controls">
+        <button id="listenBtn" class="btn ghost">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Listen
+        </button>
+        <button id="micBtn" class="mic" aria-label="Start speaking">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span id="micLabel">Speak</span>
+        </button>
+      </div>
+      <p id="hint" class="hint" aria-live="polite"></p>
+      <p id="heard" class="heard" hidden></p>
+      <button id="skipBtn" class="link">Skip this line</button>
+    </div>
+
+    <div id="feedback" class="feedback" hidden aria-live="polite">
+      <div class="scorebox">
+        <div id="cupWrap"></div>
+        <div>
+          <div class="num"><span id="scoreNum">0</span><small> / 100</small></div>
+          <div id="scoreStars" class="stars" role="img"></div>
+        </div>
+      </div>
+      <div id="msg" class="msg"></div>
+      <div id="tips" class="tips" hidden></div>
+      <div class="actions">
+        <button id="retryBtn" class="btn ghost">Try again</button>
+        <button id="nextBtn" class="btn next">Next line</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="res" hidden aria-live="polite">
+    <h2>Well done!</h2>
+    <div class="scorebox">
+      <div id="cupWrap2"></div>
+      <div>
+        <div class="num"><span id="avgNum">0</span><small> / 100</small></div>
+        <div id="avgStars" class="stars" role="img"></div>
+      </div>
+    </div>
+    <div id="closing" class="bubble waiter" hidden></div>
+    <ul id="list" class="list"></ul>
+    <div class="actions">
+      <button id="tricky" class="btn ghost" hidden>Practise tricky lines</button>
+      <button id="again" class="btn">Play again</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Free and open source (MIT). Scores come from your browser's speech recognition, so they are a friendly guide, not an exam.
+</footer>
+
+<script>
+'use strict';
+
+/* ---------- THE DIALOGUES (edit these lines to make your own lesson) ---------- */
+const DIALOGUE = [
+  // Dialogue 1: Check-in (Basic)
+  {who:'waiter',   text:"Can I see your ticket, please?"},
+  {who:'customer', text:"Sure, here is my e-ticket."},
+  {who:'waiter',   text:"Thank you. How much luggage do you have?"},
+  {who:'customer', text:"One rucksack. Could I take it as my hand luggage?"},
+  {who:'waiter',   text:"I'm afraid it is too big. Here is your boarding pass. You'll need to show it again at the gate."},
+  {who:'customer', text:"Thank you."},
+  // Dialogue 2: Check-in (Extended)
+  {who:'customer', text:"Is this the right desk? My flight is XYZ."},
+  {who:'waiter',   text:"Yes, that's right. May I see your passport and your ticket, please?"},
+  {who:'customer', text:"Here you are."},
+  {who:'waiter',   text:"Thank you. Could you please put your luggage on the conveyor belt?"},
+  {who:'customer', text:"Sure."},
+  {who:'waiter',   text:"Here is your boarding card. The plane is boarding in 40 minutes. Have a nice flight."},
+  {who:'customer', text:"Thank you."}
+];
+const PASS = 70;          // score needed to go on automatically
+const AUTO_DELAY = 3000;  // ms before the next line starts
+
+/* ---------- Helpers ---------- */
+const $ = s => document.querySelector(s);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const synth = window.speechSynthesis || null;
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+const EMOJI = {waiter:'🧑‍✈️', customer:'🧳'};
+const NAME = {waiter:'Check-in clerk', customer:'Traveller'};
+const ICON_SPEAKER = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+
+const state = {mode:'all', allSteps:[], steps:[], i:0, scores:{}, slow:false, starts:[]};
+let rec = null, recording = false, recTimer = null, autoTimer = null, playToken = 0, currentUtter = null;
+
+/* ---------- Text matching ---------- */
+const ONES = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+const TENS = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+const numWords = n => n < 20 ? ONES[n] : n < 100 ? TENS[Math.floor(n/10)] + (n % 10 ? ' ' + ONES[n % 10] : '') : String(n);
+const CONTR = {"i'm":['i','am'],"i'll":['i','will'],"i'd":['i','would'],"i've":['i','have'],"that'll":['that','will'],"that's":['that','is'],"it's":['it','is'],"here's":['here','is'],"you're":['you','are'],"we'll":['we','will'],"let's":['let','us'],"what's":['what','is'],"can't":['can','not'],"don't":['do','not'],"won't":['will','not'],"you'll":['you','will']};
+
+function norm(str){
+  let s = str.toLowerCase().replace(/[’‘`]/g, "'");
+  s = s.replace(/\$?\s?(\d+)[.:](\d{1,2})\b/g, (m,a,b) => numWords(+a) + ' ' + numWords(b.length === 1 ? +b * 10 : +b));
+  s = s.replace(/\$\s?(\d+)/g, (m,a) => numWords(+a)).replace(/\b\d+\b/g, m => numWords(+m));
+  s = s.replace(/\bdollars?\s+and\s+/g, ' ').replace(/\b(dollars?|cents?)\b/g, ' ');
+  s = s.replace(/[^a-z' ]+/g, ' ');
+  const out = [];
+  for (let t of s.split(/\s+/)){
+    t = t.replace(/^'+|'+$/g, '');
+    if (!t) continue;
+    if (CONTR[t]) out.push(...CONTR[t]); else out.push(t);
+  }
+  return out;
+}
+
+function lev(a, b){
+  const m = a.length, n = b.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({length:n+1}, (_,j) => j);
+  for (let i = 1; i <= m; i++){
+    const cur = [i];
+    for (let j = 1; j <= n; j++)
+      cur[j] = Math.min(prev[j]+1, cur[j-1]+1, prev[j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[n];
+}
+
+function tokScore(a, b){
+  if (a === b) return 1;
+  const sim = 1 - lev(a, b) / Math.max(a.length, b.length);
+  return (sim >= 0.72 && Math.min(a.length, b.length) > 2) ? 0.6 : 0;
+}
+
+function align(target, said){
+  const n = target.length, m = said.length;
+  const dp = Array.from({length:n+1}, () => new Array(m+1).fill(0));
+  for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++){
+    const sc = tokScore(target[i-1].tok, said[j-1]);
+    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1], sc > 0 ? dp[i-1][j-1] + sc : 0);
+  }
+  const scores = new Array(n).fill(0);
+  let i = n, j = m, used = 0;
+  while (i > 0 && j > 0){
+    const sc = tokScore(target[i-1].tok, said[j-1]);
+    if (sc > 0 && dp[i][j] === dp[i-1][j-1] + sc){ scores[i-1] = sc; used++; i--; j--; }
+    else if (dp[i-1][j] >= dp[i][j-1]) i--;
+    else j--;
+  }
+  return {scores, extras: m - used};
+}
+
+function evaluate(step, alts){
+  const words = step.text.split(' ');
+  const target = [];
+  words.forEach((w, ti) => norm(w).forEach(tok => target.push({tok, tile:ti})));
+  let best = null;
+  for (const a of alts){
+    const said = norm(a.transcript);
+    const {scores, extras} = align(target, said);
+    const base = target.length ? scores.reduce((x,y) => x+y, 0) / target.length : 0;
+    const penalty = 1 - Math.min(0.3, extras * 0.05);
+    const conf = a.confidence > 0 ? a.confidence : 1;
+    const final = Math.round(100 * base * penalty * (0.85 + 0.15 * conf));
+    if (!best || final > best.score) best = {score:final, scores, transcript:a.transcript};
+  }
+  const tiles = words.map((w, ti) => {
+    const idx = target.map((t,k) => t.tile === ti ? k : -1).filter(k => k >= 0);
+    if (!idx.length) return 'good';
+    const avg = idx.reduce((x,k) => x + best.scores[k], 0) / idx.length;
+    return avg >= 0.95 ? 'good' : avg >= 0.5 ? 'close' : 'bad';
+  });
+  return {score:best.score, tiles, transcript:best.transcript, words};
+}
+
+/* ---------- Speaking (text to speech) ---------- */
+let voices = [];
+function loadVoices(){
+  if (!synth) return;
+  voices = synth.getVoices().filter(v => /^en([-_]|$)/i.test(v.lang));
+  const sel = $('#voiceSel'), prev = sel.value;
+  sel.innerHTML = '';
+  voices.forEach(v => { const o = document.createElement('option'); o.value = v.voiceURI; o.textContent = v.name; sel.appendChild(o); });
+  const pref = voices.find(v => v.voiceURI === prev)
+    || voices.find(v => /en[-_]US/i.test(v.lang) && /natural|google|samantha|aria|jenny/i.test(v.name))
+    || voices.find(v => /en[-_]US/i.test(v.lang)) || voices[0];
+  if (pref) sel.value = pref.voiceURI;
+  sel.hidden = !voices.length;
+}
+if (synth){ loadVoices(); synth.onvoiceschanged = loadVoices; }
+
+function speak(text, {who='waiter', slow=false, onWord} = {}){
+  return new Promise(resolve => {
+    if (!synth){ resolve(); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    const v = voices.find(x => x.voiceURI === $('#voiceSel').value);
+    if (v){ u.voice = v; u.lang = v.lang; } else u.lang = 'en-US';
+    u.rate = (slow || state.slow) ? 0.6 : 0.9;
+    u.pitch = who === 'customer' ? 1.25 : 0.95;
+    if (onWord) u.onboundary = e => { if (!e.name || e.name === 'word') onWord(e.charIndex); };
+    u.onend = u.onerror = () => resolve();
+    currentUtter = u;            // keep a reference so it is not garbage collected
+    synth.speak(u);
+  });
+}
+
+function stopSpeaking(){ playToken++; if (synth) synth.cancel(); clearHighlight(); }
+
+/* ---------- UI helpers ---------- */
+const cur = () => state.steps[state.i];
+const setHint = t => { $('#hint').textContent = t; };
+const starOn = on => `<svg class="star ${on ? 'on' : ''}" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>`;
+const starCount = s => s >= 90 ? 3 : s >= 70 ? 2 : s >= 40 ? 1 : 0;
+const starsHTML = n => [0,1,2].map(k => starOn(k < n)).join('');
+let cupId = 0;
+function cupHTML(){
+  const id = 'cc' + (++cupId);
+  return `<svg class="cup" viewBox="0 0 140 120" aria-hidden="true">
+    <clipPath id="${id}"><path d="M18 28H98V66C98 88 82 104 58 104C34 104 18 88 18 66Z"/></clipPath>
+    <path d="M18 28H98V66C98 88 82 104 58 104C34 104 18 88 18 66Z" fill="#fff"/>
+    <g clip-path="url(#${id})"><rect class="cupfill" x="14" y="28" width="90" height="80" fill="#C98B4E"/><rect x="14" y="28" width="90" height="6" fill="#F2DDBE" opacity=".0"/></g>
+    <path d="M18 28H98V66C98 88 82 104 58 104C34 104 18 88 18 66Z" fill="none" stroke="#3B3A9B" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M98 42H108a14 14 0 0 1 0 28H96" fill="none" stroke="#3B3A9B" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="58" cy="112" rx="46" ry="5" fill="#3B3A9B"/></svg>`;
+}
+function setCup(wrap, score){
+  const f = wrap.querySelector('.cupfill');
+  f.style.transform = 'translateY(0px)';
+  f.style.transform = 'translateY(76px)';
+  requestAnimationFrame(() => requestAnimationFrame(() => { f.style.transform = `translateY(${76 * (1 - score/100)}px)`; }));
+}
+function show(id){
+  ['start','practice','results'].forEach(s => $('#' + s).hidden = s !== id);
+  $('#menuBtn').hidden = id === 'start';
+  window.scrollTo(0, 0);
+}
+function clearHighlight(){ document.querySelectorAll('.tile.say').forEach(t => t.classList.remove('say')); }
+function highlight(charIndex){
+  let idx = 0;
+  state.starts.forEach((st, k) => { if (st <= charIndex) idx = k; });
+  clearHighlight();
+  const t = $('#tiles').children[idx]; if (t) t.classList.add('say');
+}
+function clearAuto(){ clearTimeout(autoTimer); autoTimer = null; $('#nextBtn').classList.remove('counting'); }
+
+/* ---------- Session flow ---------- */
